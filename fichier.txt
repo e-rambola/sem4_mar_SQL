@@ -1,0 +1,19 @@
+2.1. La startup tech du moment
+CREATE TABLE 'user'('id_u' INTEGER PRIMARY KEY AUTOINCREMENTE, 'name' TEXT);
+CREATE TABLE 'article'('id_a' INTEGER PRIMARY KEY AUTOINCREMENTE, 'id_u' INTEGER, 'article' TEXT, FOREIGN KEY(id_u)REFERENCES user(id_a));
+CREATE TABLE 'category'('id_c' INTEGER PRIMARY KEY AUTOINCREMENTE, 'id_a' INTEGER, 'titre' TEXT, FOREIGN KEY(id_a)REFERENCES article(id_a));
+CREATE TABLE 'tag'('id_t' INTEGER PRIMARY KEY AUTOINCREMENTE, 'id_c' INTEGER, 'titre' TEXT, 'couleur' TEXT, FOREIGN KEY(id_a)REFERENCES article(id_a));
+INSERT INTO user (name) VALUES ('Anarana');
+
+2.2.1. MOOCademy
+CREATE TABLE 'cours'('id_c' INTEGER PRIMARY KEY AUTOINCREMENTE, 'titre' TEXT, 'description' TEXT);
+CREATE TABLE 'leçcon'('id_l' INTEGER PRIMARY KEY AUTOINCREMENTE, 'id_c' INTEGER, 'titre' TEXT, 'body' TEXT, FOREIGN KEY(id_c) REFERENCES cours(id_c));
+
+2.2.2. The Hacking Pinterest
+CREATE TABLE 'user'('id_u' INTEGER PRIMARY KEY AUTOINCREMENTE, 'name' TEXT);
+CREATE TABLE 'pins'('id_p' INTEGER PRIMARY KEY AUTOINCREMENTE, 'id_u' INTEGER, 'url_img' TEXT, 'commentaire' TEXT, FOREIGN KEY(id_u) REFERENCES user(id_u));
+
+2.2.3. The Hacking News
+CREATE TABLE 'user'('id_u' INTEGER PRIMARY KEY AUTOINCREMENTE, 'name' TEXT);
+
+2.2.4. The Hacking Class
